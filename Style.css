@@ -45,7 +45,7 @@ nav a {
 /* HERO */
 .hero {
   height: 90vh;
-  background: url('images/hero.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), var(--sage-dark);
   display: flex;
   align-items: center;
   justify-content: center;
