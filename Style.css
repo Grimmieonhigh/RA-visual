@@ -29,6 +29,11 @@ header {
   color: white;
 }
 
+header h2 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
 nav a {
   margin-left: 20px;
   text-decoration: none;
