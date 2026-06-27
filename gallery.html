@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Gallery</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-<header>
-  <h1>Gallery</h1>
-</header>
+<section class="section">
+  <h2>Gallery</h2>
 
-<section class="gallery">
   <div class="grid">
-    <img src="images/photo1.jpg">
-    <img src="images/photo2.jpg">
-    <img src="images/photo3.jpg">
-    <img src="images/photo4.jpg">
+    <img src="images/photo1.jpg" onclick="openLightbox(this)">
+    <img src="images/photo2.jpg" onclick="openLightbox(this)">
+    <img src="images/photo3.jpg" onclick="openLightbox(this)">
   </div>
 </section>
+
+<div class="lightbox" onclick="closeLightbox()" id="lightbox">
+  <img id="lightbox-img">
+</div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
