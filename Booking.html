@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
 
+<body>
+
+<section class="section">
+  <h2>Book Your Session</h2>
+
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+    <input type="text" name="name" placeholder="Full Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+
+    <select name="session">
+      <option>4:20 PM</option>
+      <option>4:40 PM</option>
+    </select>
+
+    <textarea name="message" placeholder="Tell me about your session"></textarea>
+
+    <button type="submit">Secure Your Spot</button>
+
+  </form>
+</section>
+
+</body>
+</html>
