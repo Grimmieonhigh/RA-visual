@@ -24,9 +24,9 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 20px 40px;
-  position: absolute;
-  width: 100%;
-  color: white;
+  background: transparent;
+  position: relative;
+  z-index: 10;
 }
 
 header h2 {
@@ -140,4 +140,20 @@ footer {
   color: white;
   text-align: center;
   padding: 20px;
+}
+.hero h1 {
+  font-size: 64px;
+  letter-spacing: 4px;
+  font-weight: 500;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
+  transition: 0.3s;
 }
