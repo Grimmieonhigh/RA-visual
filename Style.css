@@ -12,6 +12,7 @@
   --black: #000000;
 }
 
+/* GLOBAL */
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
@@ -23,29 +24,38 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
-  background: transparent;
-  position: relative;
-  z-index: 10;
+  align-items: center;
+  padding: 25px 60px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 100;
 }
 
 header h2 {
-  font-size: 20px;
+  color: white;
   letter-spacing: 3px;
   font-weight: 500;
 }
+
 nav a {
-  margin-left: 20px;
+  margin-left: 25px;
   text-decoration: none;
   color: white;
   font-size: 14px;
   letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--blush);
 }
 
 /* HERO */
 .hero {
-  height: 90vh;
-  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), var(--sage-dark);
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url("images/photo1.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,32 +64,39 @@ nav a {
 }
 
 .hero h1 {
-  font-size: 60px;
-  letter-spacing: 2px;
+  font-size: 70px;
+  letter-spacing: 4px;
+  margin: 0;
 }
 
 .hero p {
   font-size: 18px;
-  margin: 10px 0;
+  opacity: 0.9;
 }
 
 .btn {
-  padding: 12px 28px;
+  padding: 14px 32px;
   border: 1px solid white;
   color: white;
   text-decoration: none;
-  margin-top: 15px;
+  margin-top: 20px;
   display: inline-block;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: white;
+  color: black;
 }
 
 /* SECTIONS */
 .section {
-  padding: 80px 40px;
+  padding: 100px 60px;
   text-align: center;
 }
 
 .section h2 {
-  font-size: 32px;
+  font-size: 36px;
   margin-bottom: 20px;
 }
 
@@ -87,12 +104,19 @@ nav a {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+  gap: 20px;
 }
 
 .grid img {
   width: 100%;
+  border-radius: 10px;
+  transition: 0.4s;
   cursor: pointer;
+}
+
+.grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 /* LIGHTBOX */
@@ -102,36 +126,50 @@ nav a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0,0,0,0.95);
   display: none;
   align-items: center;
   justify-content: center;
 }
 
 .lightbox img {
-  max-width: 90%;
+  max-width: 85%;
   max-height: 80%;
+  border-radius: 10px;
 }
 
-/* BOOKING */
+/* BOOKING FORM */
 form {
   max-width: 500px;
   margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
 input, textarea, select {
   width: 100%;
   padding: 12px;
-  margin: 10px 0;
+  margin: 12px 0;
   border: 1px solid #ddd;
+  border-radius: 6px;
+  font-family: inherit;
 }
 
 button {
   background: var(--sage-dark);
   color: white;
   border: none;
-  padding: 12px;
+  padding: 14px;
   width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--forest);
 }
 
 /* FOOTER */
@@ -139,21 +177,5 @@ footer {
   background: var(--deep-green);
   color: white;
   text-align: center;
-  padding: 20px;
-}
-.hero h1 {
-  font-size: 64px;
-  letter-spacing: 4px;
-  font-weight: 500;
-}
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.9;
-}
-
-.btn:hover {
-  background: white;
-  color: black;
-  transition: 0.3s;
+  padding: 30px;
 }
