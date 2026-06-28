@@ -13,14 +13,16 @@
   <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
     <input type="text" name="name" placeholder="Full Name" required>
-    <input type="email" name="email" placeholder="Email" required>
+
+    <input type="email" name="email" placeholder="Email Address" required>
 
     <select name="session">
+      <option disabled selected>Select a time</option>
       <option>4:20 PM</option>
       <option>4:40 PM</option>
     </select>
 
-    <textarea name="message" placeholder="Tell me about your session"></textarea>
+    <textarea name="message" placeholder="Tell me about your session (type, location, vibe...)"></textarea>
 
     <button type="submit">Secure Your Spot</button>
 
