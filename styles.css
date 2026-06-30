@@ -172,6 +172,10 @@ button:hover {
   background: var(--forest);
 }
 
+body {
+  background: red !important;
+}
+
 /* FOOTER */
 footer {
   background: var(--deep-green);
